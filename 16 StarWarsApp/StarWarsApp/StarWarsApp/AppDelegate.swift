@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  StarWarApp
+//  StarWarsApp
 //
-//  Created by Jorge Jimenez on 8/18/16.
+//  Created by Jorge Jimenez on 8/21/16.
 //  Copyright © 2016 xadrijo. All rights reserved.
 //
 

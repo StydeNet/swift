@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  StarWarApp
+//  StarWarsApp
 //
-//  Created by Jorge Jimenez on 8/18/16.
+//  Created by Jorge Jimenez on 8/21/16.
 //  Copyright © 2016 xadrijo. All rights reserved.
 //
 
@@ -17,21 +17,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var eyeColorLabel: UILabel!
     @IBOutlet weak var genderLabel: UILabel!
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let swEndpoint = "http://swapi.co/api/people/2/"
         
         guard let url = NSURL(string: swEndpoint) else {
-            print("No se pudo crear la URL")
+            print("No se pudo crear el URL")
             return
         }
         
         let urlRequest = NSURLRequest(URL: url)
         let session = NSURLSession.sharedSession()
         
-        let task = session.dataTaskWithRequest(urlRequest) { (data: NSData?, response: NSURLResponse?, error: NSError?) in
+        let task = session.dataTaskWithRequest(urlRequest) { (data: NSData?, response:
+            NSURLResponse?, error: NSError?) in
             
             guard let responseData = data else {
                 print("Data no recibida")
@@ -40,7 +41,7 @@ class ViewController: UIViewController {
             
             do {
                 guard let people = try NSJSONSerialization.JSONObjectWithData(responseData, options: []) as? [String : AnyObject] else {
-                    print("Error tratando de convertir data a JSON")
+                    print("Error tratando de convertir a JSON")
                     return
                 }
                 
@@ -63,13 +64,14 @@ class ViewController: UIViewController {
                 
                 
             } catch {
-                print("Error tratando de convertir data a JSON")
+                print("Error tratando de convertir a JSON")
             }
         }
         
         task.resume()
+        
     }
-
+    
     func updateUI(name: String, height: String, hairColor: String, eyeColor: String, gender: String) {
         nameLabel.text = name
         heightLabel.text = height
@@ -78,13 +80,6 @@ class ViewController: UIViewController {
         genderLabel.text = gender
     }
 
+
 }
-
-
-
-
-
-
-
-
 

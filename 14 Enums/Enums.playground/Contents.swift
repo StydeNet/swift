@@ -50,11 +50,10 @@ if let player = madridPlayer {
     case .Casemiro:
         print("Nombre: Casemiro - num: \(numberPlayer)")
     default:
-        print("Dicho camiseta no existe")
-
+        print("Dicha camiseta no existe")
     }
 } else {
-    print("Este numero de camiseta no existe")
+    print("Este numero no existe")
 }
 
 

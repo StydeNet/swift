@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>StarWarApp.xcscheme</key>
+		<key>StarWarsApp.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>861D9EB01D65E37C00627F2A</key>
+		<key>86F667C11D6A5F9C0025C526</key>
 		<dict>
 			<key>primary</key>
 			<true/>
